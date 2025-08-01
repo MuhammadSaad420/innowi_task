@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:innowi_task/core/services/db/db_service.dart';
+import 'package:innowi_task/model/data/cart_item.dart';
 
 import '../../../../core/enums/image_type.dart';
 import '../../../../model/data/product_model.dart';
@@ -75,18 +77,34 @@ class ProductListTile extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 15,
-                          vertical: 5,
-                        ),
-                        decoration: BoxDecoration(
-                          color: AppColors.primary,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: const Text(
-                          AppStrings.add,
-                          style: TextStyle(color: Colors.white),
+                      InkWell(
+                        onTap: () {
+                          // DbService.instance.getCartItems().then((items) {
+                          //   print(items.toString());
+                          // });
+                          // // DbService.instance.clearCart();
+                          // // DbService.instance.addCartItem(
+                          // //   CartItem()
+                          // //     ..productName = product.title
+                          // //     ..productImage = product.images.first
+                          // //     ..productPrice = product.price
+                          // //     ..productId = product.id
+                          // //     ..quantity = 1,
+                          // // );
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 15,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.primary,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: const Text(
+                            AppStrings.add,
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       )
                     ],

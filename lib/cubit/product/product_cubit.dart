@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:innowi_task/cubit/product_state.dart';
-import 'package:innowi_task/model/repositories/iproduct_repository.dart';
+import 'package:innowi_task/cubit/product/product_state.dart';
+import 'package:innowi_task/model/repositories/product/iproduct_repository.dart';
 
 class ProductCubit extends Cubit<ProductState> {
   final IProductRepository _productRepository;

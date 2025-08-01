@@ -11,11 +11,27 @@ dependencies:
     sdk: flutter
 
   go_router: 16.0.0
+  retrofit: 4.4.2
+  dio: 5.8.0+1
+  built_value: 8.9.5
+  json_annotation: 4.9.0
+  freezed: 2.4.4
+  pretty_dio_logger: 1.4.0
+  get_it: 8.0.0
+  flutter_bloc: 9.1.1
+  flutter_hooks: 0.20.5
+  cached_network_image: 3.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  retrofit_generator: 9.1.3
+  build_runner: 2.4.13
+  envied_generator: 1.0.0
+  json_serializable: 6.8.0
+  built_value_generator: 8.9.2
+  freezed_annotation: 2.4.4
 
 flutter:
   uses-material-design: true

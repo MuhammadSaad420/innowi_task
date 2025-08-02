@@ -8,7 +8,7 @@ class CartRepository extends ICartRepository {
 
   @override
   Future<void> addItem(CartItem item) async {
-    await _dbService.addItem(item);
+    await _dbService.addItem<CartItem>(item);
   }
 
   @override
@@ -23,11 +23,11 @@ class CartRepository extends ICartRepository {
 
   @override
   Future<void> removeItem(CartItem item) async {
-    await _dbService.removeItem(item, item.id);
+    await _dbService.removeItem<CartItem>(item, item.id);
   }
 
   @override
   Future<void> updateItem(CartItem item) async {
-    await _dbService.updateItem(item);
+    await _dbService.updateItem<CartItem>(item);
   }
 }

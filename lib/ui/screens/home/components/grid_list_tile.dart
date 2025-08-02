@@ -83,7 +83,7 @@ class GridListTile extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: const Text(
-                            AppStrings.add,
+                            AppStrings.addToCart,
                             style: TextStyle(color: Colors.white),
                           ),
                         )

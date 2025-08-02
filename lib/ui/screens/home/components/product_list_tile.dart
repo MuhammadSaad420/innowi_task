@@ -12,10 +12,11 @@ class ProductListTile extends StatelessWidget {
   const ProductListTile({
     super.key,
     required this.product,
+    required this.onAddToCart,
   });
 
   final Product product;
-
+  final VoidCallback onAddToCart;
   @override
   Widget build(BuildContext context) {
     final mq = MediaQuery.sizeOf(context);
@@ -78,20 +79,7 @@ class ProductListTile extends StatelessWidget {
                         ],
                       ),
                       InkWell(
-                        onTap: () {
-                          // DbService.instance.getCartItems().then((items) {
-                          //   print(items.toString());
-                          // });
-                          // // DbService.instance.clearCart();
-                          // // DbService.instance.addCartItem(
-                          // //   CartItem()
-                          // //     ..productName = product.title
-                          // //     ..productImage = product.images.first
-                          // //     ..productPrice = product.price
-                          // //     ..productId = product.id
-                          // //     ..quantity = 1,
-                          // // );
-                        },
+                        onTap: onAddToCart,
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 15,
@@ -102,7 +90,7 @@ class ProductListTile extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: const Text(
-                            AppStrings.add,
+                            AppStrings.addToCart,
                             style: TextStyle(color: Colors.white),
                           ),
                         ),

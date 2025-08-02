@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:innowi_task/cubit/cart/cart_cubit.dart';
 import 'package:innowi_task/cubit/product/product_cubit.dart';
+import 'package:innowi_task/ui/resources/app_routes.dart';
+import 'package:innowi_task/ui/resources/app_strings.dart';
 
 import '../../../cubit/cart/cart_state.dart';
 import '../../../cubit/product/product_state.dart';
@@ -29,12 +32,18 @@ class ProductListScreen extends HookWidget {
     }, []);
     return Scaffold(
       appBar: AppBarWidget(
+        title: AppStrings.products,
         actions: [
           BlocBuilder<CartCubit, CartState>(
             builder: (context, state) {
-              return Badge(
-                label: Text(state.items.length.toString()),
-                child: const Icon(Icons.shopping_cart),
+              return InkWell(
+                onTap: () {
+                  context.pushNamed(AppRoutes.cartScreen);
+                },
+                child: Badge(
+                  label: Text(state.items.length.toString()),
+                  child: const Icon(Icons.shopping_cart),
+                ),
               );
             },
           ),

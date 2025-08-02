@@ -71,22 +71,22 @@ class GridProductListTile extends StatelessWidget {
                               "\$ ${product.price.toString()}",
                               style: const TextStyle(color: Colors.white),
                             ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 15,
+                                vertical: 5,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.primary,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: const Text(
+                                AppStrings.addToCart,
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
                           ],
                         ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 15,
-                            vertical: 5,
-                          ),
-                          decoration: BoxDecoration(
-                            color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: const Text(
-                            AppStrings.addToCart,
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        )
                       ],
                     ),
                   ),

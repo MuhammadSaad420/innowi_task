@@ -10,9 +10,11 @@ class GridProductListTile extends StatelessWidget {
   const GridProductListTile({
     super.key,
     required this.product,
+    required this.onAddToCart,
   });
 
   final Product product;
+  final VoidCallback onAddToCart;
 
   @override
   Widget build(BuildContext context) {
@@ -71,18 +73,21 @@ class GridProductListTile extends StatelessWidget {
                               "\$ ${product.price.toString()}",
                               style: const TextStyle(color: Colors.white),
                             ),
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 15,
-                                vertical: 5,
-                              ),
-                              decoration: BoxDecoration(
-                                color: AppColors.primary,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: const Text(
-                                AppStrings.addToCart,
-                                style: TextStyle(color: Colors.white),
+                            InkWell(
+                              onTap: onAddToCart,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 15,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: AppColors.primary,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: const Text(
+                                  AppStrings.addToCart,
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               ),
                             ),
                           ],

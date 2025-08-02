@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:innowi_task/core/extensions/cart_extensions.dart';
 import 'package:innowi_task/cubit/cart/cart_cubit.dart';
 import 'package:innowi_task/ui/common/app_bar_widget.dart';
 import 'package:innowi_task/ui/resources/app_strings.dart';
@@ -32,10 +33,7 @@ class CartScreen extends StatelessWidget {
       bottomNavigationBar: cartItems.isEmpty
           ? null
           : CartFooter(
-              totalPrice: cartItems
-                  .fold<double>(0,
-                      (sum, item) => sum + (item.productPrice! * item.quantity))
-                  .toStringAsFixed(2),
+              totalPrice: cartItems.totalPrice.toStringAsFixed(2),
             ),
     );
   }

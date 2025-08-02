@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:innowi_task/cubit/cart/cart_cubit.dart';
 import 'package:innowi_task/model/data/cart_item.dart';
 import 'package:innowi_task/model/data/product_model.dart';
-import 'package:innowi_task/ui/screens/home/components/product_list_tile.dart';
+import 'package:innowi_task/ui/screens/product/components/portrait_product_list_tile.dart';
 
 class PortraitListingView extends StatelessWidget {
   const PortraitListingView({
@@ -17,7 +17,7 @@ class PortraitListingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: products.length,
-      itemBuilder: (_, index) => ProductListTile(
+      itemBuilder: (_, index) => PortraintProductListTile(
         product: products[index],
         onAddToCart: () {
           final cartItem = CartItem()

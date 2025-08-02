@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:innowi_task/ui/screens/cart/cart_screen.dart';
-import 'package:innowi_task/ui/screens/home/product_list_screen.dart';
+import 'package:innowi_task/ui/screens/product/product_list_screen.dart';
 
 class AppRoutes {
   AppRoutes._();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:innowi_task/ui/screens/home/components/grid_list_tile.dart';
+import 'package:innowi_task/ui/screens/product/components/grid_product_list_tile.dart';
 
 import '../../../../model/data/product_model.dart';
 
@@ -22,7 +22,7 @@ class LandscapeListingView extends StatelessWidget {
         childAspectRatio: 1,
       ),
       itemCount: products.length,
-      itemBuilder: (_, index) => GridListTile(product: products[index]),
+      itemBuilder: (_, index) => GridProductListTile(product: products[index]),
     );
   }
 }

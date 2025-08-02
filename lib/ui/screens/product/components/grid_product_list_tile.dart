@@ -6,8 +6,8 @@ import '../../../common/image_widget.dart';
 import '../../../resources/app_colors.dart';
 import '../../../resources/app_strings.dart';
 
-class GridListTile extends StatelessWidget {
-  const GridListTile({
+class GridProductListTile extends StatelessWidget {
+  const GridProductListTile({
     super.key,
     required this.product,
   });

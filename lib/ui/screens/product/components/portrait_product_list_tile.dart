@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:innowi_task/core/services/db/db_service.dart';
-import 'package:innowi_task/model/data/cart_item.dart';
 
 import '../../../../core/enums/image_type.dart';
 import '../../../../model/data/product_model.dart';
@@ -8,8 +6,8 @@ import '../../../common/image_widget.dart';
 import '../../../resources/app_colors.dart';
 import '../../../resources/app_strings.dart';
 
-class ProductListTile extends StatelessWidget {
-  const ProductListTile({
+class PortraintProductListTile extends StatelessWidget {
+  const PortraintProductListTile({
     super.key,
     required this.product,
     required this.onAddToCart,

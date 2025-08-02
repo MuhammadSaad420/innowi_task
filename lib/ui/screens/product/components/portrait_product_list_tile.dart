@@ -6,14 +6,15 @@ import '../../../common/image_widget.dart';
 import '../../../resources/app_colors.dart';
 import '../../../resources/app_strings.dart';
 
-class ProductListTile extends StatelessWidget {
-  const ProductListTile({
+class PortraintProductListTile extends StatelessWidget {
+  const PortraintProductListTile({
     super.key,
     required this.product,
+    required this.onAddToCart,
   });
 
   final Product product;
-
+  final VoidCallback onAddToCart;
   @override
   Widget build(BuildContext context) {
     final mq = MediaQuery.sizeOf(context);
@@ -75,18 +76,21 @@ class ProductListTile extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 15,
-                          vertical: 5,
-                        ),
-                        decoration: BoxDecoration(
-                          color: AppColors.primary,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: const Text(
-                          AppStrings.add,
-                          style: TextStyle(color: Colors.white),
+                      InkWell(
+                        onTap: onAddToCart,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 15,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: AppColors.primary,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: const Text(
+                            AppStrings.addToCart,
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       )
                     ],

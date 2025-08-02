@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:innowi_task/ui/resources/app_strings.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({
     super.key,
+    required this.title,
+    this.actions,
   });
+
+  final String title;
+  final List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(AppStrings.products),
+      actionsPadding: const EdgeInsets.only(right: 16),
+      title: Text(title),
       centerTitle: true,
+      actions: actions,
     );
   }
 
